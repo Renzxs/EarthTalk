@@ -31,7 +31,7 @@ function ChatScreen() {
     };
 
     const fetchMessages = () => {
-        axios.get('http://127.0.0.1:8000/messages/')
+        axios.get('https://renzxs.pythonanywhere.com/messages/')
             .then(res => {
                 setMessagesData(res.data);
                 scrollToBottom();
