@@ -1,0 +1,141 @@
+*  {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-direction: column;
+  background: rgb(34,193,195);
+  background: linear-gradient(152deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+
+
+.chat-container {
+  width: 50%;
+  height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow: hidden;
+  background-color: white;
+}
+
+.chat-container .header-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #303030;
+  padding: 20px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-right {
+  text-align: right;
+  font-size: 12px;
+  justify-content: end;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-right > p {
+  width: 50%;
+}
+
+.chat-container .header-left > h1 {
+  font-size: 20px;
+}
+
+.chat-container .messages-container {
+  width: 100%;
+  height: 75%;
+  padding: 10px;
+}
+
+.messages-container .msg-con-body {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.input-container {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #0D0D0D;
+}
+
+.input-container button {
+  background-color: #0D0D0D;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container button:hover {
+  background-color: #363636;
+}
+
+.chatbox {
+  background-color: #F2F2F2;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  margin: 10px;
+  gap: 15px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.content .datetime {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.delete-btn {
+  color: #B10D0D;
+}
+
+.delete-btn:hover {
+  color: #c44040;
+}
+
+@media (max-width: 700px){
+  .chat-container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 500px){
+  .chat-container {
+    width: 90%;
+  }
+}
