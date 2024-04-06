@@ -120,6 +120,10 @@
   align-items: center;
 }
 
+.chatbox .content {
+  width: 80%;
+}
+
 .content .datetime {
   font-size: 12px;
   margin-top: 10px;
