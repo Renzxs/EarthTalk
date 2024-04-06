@@ -9,7 +9,8 @@ function ChatScreen() {
     const msgContainerRef = useRef(null);
 
     const sendMessage = () => {
-        axios.post('http://127.0.0.1:8000/messages/', { content: message })
+        if(message){
+            axios.post('https://renzxs.pythonanywhere.com/messages/', { content: message })
             .then(res => {
                 setMessage('');
                 fetchMessages();
@@ -17,10 +18,14 @@ function ChatScreen() {
             .catch(err => {
                 console.log("Internal Server Error: ", err);
             });
+        }
+        else {
+            console.log("No message");
+        }
     };
 
     const deleteMessage = (id) => {
-        axios.delete(`http://127.0.0.1:8000/messages/${id}/`)
+        axios.delete(`https://renzxs.pythonanywhere.com/messages/${id}/`)
             .then(res => {
                 console.log(res.data);
                 fetchMessages();

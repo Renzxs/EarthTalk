@@ -7,7 +7,6 @@ function App() {
   return (
     <div className='main-container'>
       <ChatScreen />
-      <p>Made with ❤️‍ by John Florence Batol</p>
     </div>
   )
 }
