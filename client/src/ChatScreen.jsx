@@ -35,19 +35,23 @@ function ChatScreen() {
             });
     };
 
-    const fetchMessages = () => {
-        axios.get('https://renzxs.pythonanywhere.com/messages/')
-            .then(res => {
-                setMessagesData(res.data);
-                scrollToBottom();
-            })
-            .catch(err => {
-                console.log("Internal Server Error: ", err);
-            });
-    };
-
     useEffect(() => {
+        const fetchMessages = () => {
+            axios.get('https://renzxs.pythonanywhere.com/messages/')
+                .then(res => {
+                    setMessagesData(res.data);
+                    scrollToBottom();
+                })
+                .catch(err => {
+                    console.log("Internal Server Error: ", err);
+                });
+        };
+
         fetchMessages();
+
+        const intervalId = setInterval(fetchMessages, 5000); 
+
+        return () => clearInterval(intervalId);
     }, []);
 
     const handleKeyPress = (e) => {
